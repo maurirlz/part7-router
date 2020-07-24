@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -66,8 +65,4 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 
 ### `npm run build` fails to minify
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-=======
-# part7-router
-Part 7 of the full stack open course of Open university.
->>>>>>> 2e70a7292f733a89b51226cd1b84fb0fa4bcc100
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify 
