@@ -1,18 +1,24 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 
-const CreateNew = (props) => {
+const CreateNew = ({ addNew, setNotification }) => {
   const [content, setContent] = useState('');
   const [author, setAuthor] = useState('');
   const [info, setInfo] = useState('');
+  const history = useHistory();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    props.addNew({
+    addNew({
       content,
       author,
       info,
       votes: 0,
     });
+    history.push('/');
+    setNotification(`anecdote ${content} successfully created.`);
+
+    setTimeout(() => setNotification(''), 10000);
   };
 
   return (

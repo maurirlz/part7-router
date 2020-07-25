@@ -10,6 +10,7 @@ import data from './data';
 
 const App = () => {
   const [anecdotes, setAnecdotes] = useState(data);
+  const [notification, setNotification] = useState('');
 
   const addNew = (anecdote) => {
     const newAnecdote = {
@@ -42,18 +43,19 @@ const App = () => {
     <div>
       <h1>Software anecdotes</h1>
       <Menu />
+      {notification}
       <Switch>
         <Route path="/anecdotes/:id">
           <Anecdote anecdote={anecdote} />
-        </Route>
-        <Route path="/anecdotes">
-          <AnecdoteList anecdotes={anecdotes} />
         </Route>
         <Route path="/about">
           <About />
         </Route>
         <Route path="/new">
-          <CreateNew addNew={addNew} />
+          <CreateNew addNew={addNew} setNotification={setNotification} />
+        </Route>
+        <Route path="/">
+          <AnecdoteList anecdotes={anecdotes} />
         </Route>
       </Switch>
       <Footer />
