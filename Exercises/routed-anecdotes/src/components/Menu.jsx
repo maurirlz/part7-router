@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, Switch, Path } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Menu = () => {
   const padding = {
