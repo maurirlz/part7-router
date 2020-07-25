@@ -1,12 +1,5 @@
 import React, { useState } from 'react';
-import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-  Switch,
-  useHistory,
-  useRouteMatch,
-} from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 import About from './components/About';
 import AnecdoteList from './components/AnecdoteList';
 import Footer from './components/Footer';
@@ -18,8 +11,12 @@ const App = () => {
   const [anecdotes, setAnecdotes] = useState(data);
 
   const addNew = (anecdote) => {
-    anecdote.id = (Math.random() * 10000).toFixed(0);
-    setAnecdotes(anecdotes.concat(anecdote));
+    const newAnecdote = {
+      ...anecdote,
+      id: (Math.random() * 10000).toFixed(0),
+    };
+
+    setAnecdotes(anecdotes.concat(newAnecdote));
   };
 
   const anecdoteById = (id) => anecdotes.find((a) => a.id === id);
