@@ -1,12 +1,9 @@
 /* eslint-disable react/prop-types */
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import { useField } from '../hooks';
 
 const CreateNew = ({ addNew, setNotification }) => {
-  // const [content, setContent] = useState('');
-  // const [author, setAuthor] = useState('');
-  // const [info, setInfo] = useState('');
   const [content, resetContent] = useField();
   const [author, resetAuthor] = useField();
   const [info, resetInfo] = useField();
