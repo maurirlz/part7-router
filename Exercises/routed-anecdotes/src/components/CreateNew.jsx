@@ -51,8 +51,7 @@ const CreateNew = ({ addNew, setNotification }) => {
         </div>
         <button type="submit">create</button>
         <button type="button" onClick={resetInputs}>
-          {' '}
-          reset{' '}
+          reset
         </button>
       </form>
     </div>
