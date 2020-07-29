@@ -50,7 +50,7 @@ const App = () => {
     <div>
       <form onSubmit={fetch}>
         <input {...nameInput} />
-        <button>find</button>
+        <button type="submit">find</button>
       </form>
 
       <Country country={country} />
